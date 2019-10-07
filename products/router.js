@@ -2,6 +2,7 @@
 const { Router } = require('express')
 const Product = require('./model')
 const router = new Router()
+const auth = require('../auth/middleware')
 
 router.get('/products', (req, res, next) => {
   Product.
@@ -18,7 +19,7 @@ router.get('/products/:id', (req, res, next) => {
     .catch(next)
 })
 
-router.post('/products', (req, res, next) => {
+router.post('/products', auth, (req, res, next) => {
   Product
     .create(req.body)
     .then(newProduct => res.json(newProduct))
