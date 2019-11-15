@@ -8,12 +8,14 @@ const port = process.env.PORT || 4000
 const productsRouter = require('./products/router')
 const userRouter = require('./user/router')
 const authRouter = require('./auth/router')
+const commentRouter = require('./comment/router')
 
 app.use(jsonParser)
 app.use(middleware)
 app.use(productsRouter)
 app.use(authRouter)
 app.use(userRouter)
+app.use(commentRouter)
 
 app.get('/', (req, res) => res.send('Welcome to Buy & Sell API'))
 app.listen(port, () => console.log(`Example App listening on port ${port}`))
