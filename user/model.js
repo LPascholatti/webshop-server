@@ -10,8 +10,16 @@ const User = sequelize.define('user', {
     type: Sequelize.STRING,
     allowNull: false
   },
+  address: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  username: {
+    type: Sequelize.STRING,
+    allowNull: false
+  }
 }, {
-  timestamps: false,
+  timestamps: true,
   tableName: 'users'
 })
 
