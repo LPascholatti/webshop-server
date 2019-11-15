@@ -1,7 +1,6 @@
 const { Router } = require('express')
 const Comment = require('./model')
 const router = new Router()
-const auth = require('../auth/middleware')
 
 router.get('/comment', (req, res, next) => {
   const limit = req.query.limit || 25
@@ -13,7 +12,7 @@ router.get('/comment', (req, res, next) => {
   .catch(next)
 });
 
-router.post('/comment', auth, (req, res, next) => {
+router.post('/comment', (req, res, next) => {
   Comment
   .create(req.body)
   .then(newComment => res.status(201).json(newComment))
