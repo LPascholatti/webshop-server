@@ -4,6 +4,8 @@
 
 Related repo: https://github.com/LPascholatti/webshop-client
 
+Deployed at Heroku: https://guarded-citadel-28026.herokuapp.com/
+
 ## Endpoints
 
 '/products'
