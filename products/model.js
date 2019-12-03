@@ -8,7 +8,9 @@ const Product = db.define("products", {
   price: Sequelize.DECIMAL,
   imageURL: Sequelize.STRING,
   email: Sequelize.STRING,
-  sellerAddress: Sequelize.STRING
+  sellerAddress: Sequelize.STRING,
+  externalUrl: Sequelize.STRING,
+  seller: Sequelize.STRING
 });
 
 module.exports = Product;

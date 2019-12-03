@@ -1,4 +1,3 @@
-
 const { Router } = require('express')
 const Product = require('./model')
 const router = new Router()
@@ -46,7 +45,5 @@ router.delete('/products/:id', (req, res, next) => {
     })
     .catch(next)
 })
-
-
 
 module.exports = router;
