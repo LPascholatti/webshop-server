@@ -10,6 +10,7 @@ const Product = db.define("products", {
   email: Sequelize.STRING,
   sellerAddress: Sequelize.STRING,
   externalUrl: Sequelize.STRING,
+  seller: Sequelize.STRING
 });
 
 module.exports = Product;
