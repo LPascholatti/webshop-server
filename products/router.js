@@ -25,7 +25,7 @@ router.post('/products', auth, (req, res, next) => {
     .catch(next)
 })
 
-router.put('/products/:id', (req, res, next) => {
+router.put('/products/:id', auth, (req, res, next) => {
   Product
     .findByPk(req.params.id)
     .then(product => product.update(req.body))
@@ -33,7 +33,7 @@ router.put('/products/:id', (req, res, next) => {
     .catch(next)
 })
 
-router.delete('/products/:id', (req, res, next) => {
+router.delete('/products/:id', auth, (req, res, next) => {
   Product
     .destroy({
       where: {
